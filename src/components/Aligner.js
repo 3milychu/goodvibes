@@ -1,11 +1,12 @@
 import React from 'react'
-import Card from './Card'
+import { Card, CardWrapper } from 'react-swipeable-cards';
+import SwipeCard from './Swipe-Card'
 
 class Aligner extends React.Component {
 	render() {
 		return(
 		<div className='aligner'>
-			<Card />
+			<SwipeCard />
 		</div>
 			)
 
