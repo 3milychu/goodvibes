@@ -2,7 +2,7 @@
 
 ## demo
 
-![](src/assets/demo.mov)
+![Alt Text](/src/assets/demo.gif)
 
 ## About this project
 
