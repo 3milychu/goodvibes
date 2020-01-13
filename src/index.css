@@ -41,6 +41,11 @@ code {
   bottom:5%;
   width:100%;
 }
+.instructions a {
+  text-decoration:none;
+  font-weight:bolder;
+  color:black;
+}
 .aligner {
   text-align:center;
   width:75vw;

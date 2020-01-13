@@ -5,6 +5,7 @@ class Instructions extends React.Component {
 		return(
 			<div className='instructions'>
 			<p>{this.props.text}</p>
+			<p>Made with ❤️ By <a href="https://3milychu.github.io" target="_blank">emily chu</a></p>
 			</div>
 
 			)
