@@ -1,3 +1,11 @@
+# Good Vibes
+
+## demo
+
+![](src/assets/demo.mov)
+
+## About this project
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
