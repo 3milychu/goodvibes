@@ -9,7 +9,7 @@ class Instructions extends React.Component {
 				<div className="next">Next badge: {this.props.next_badge}</div>
 			</div>
 			<p>{this.props.text}</p>
-			<p>Made with ❤️ By <a href="https://3milychu.github.io" target="_blank">emily chu</a></p>
+			<p>Made in React with ❤️ By <a href="https://3milychu.github.io" target="_blank">emily chu</a></p>
 			</div>
 
 			)
