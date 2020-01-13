@@ -1,8 +1,7 @@
 # Good Vibes
 
 ## demo
-
-![Alt Text](/src/assets/demo.gif)
+<kbd><img src="/src/assets/demo.gif" width="400"></kbd>
 
 ## About this project
 
