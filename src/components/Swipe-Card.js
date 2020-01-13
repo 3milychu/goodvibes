@@ -7,7 +7,7 @@ import levels from './../data/levels.csv';
 let dataset=[]
 const wrapperStyle = {
   backgroundColor: "transparent",
-  height:"60vh",
+  height:"70vh",
   marginBottom:"5%"
 }
 const colors = ["f15a22", "ab4a9c", "0083ca", "2e3192", "ff4469", "6279ff", 
@@ -31,7 +31,7 @@ class SwipeCard extends React.Component {
       padding:"5%",
       background: this.state.color,
       color:"white",
-      height:"70%",
+      height:"60%",
       borderRadius:"1em"
     }
 
