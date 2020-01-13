@@ -5,6 +5,17 @@ import data from './../data/data.csv';
 import levels from './../data/levels.csv';
 
 let dataset=[]
+const colors = ["f15a22", "ab4a9c", "0083ca", "2e3192", "ff4469", "6279ff", "00d748", 
+"ffcbb5", "cc5d49", "998783", "edb86c","ed6d6c", "4bba8d", "a0597e", "b3e1ed", "19c2ed", "54ceed"]
+
+class SwipeCard extends React.Component {
+  state = {
+    data: [],
+    score: Math.floor(Math.random()*100)+20,
+    color:"linear-gradient(73deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)"
+  };
+  renderCards() {
+    const self = this;
     const wrapperStyle = {
       backgroundColor: "transparent"
     }
@@ -14,21 +25,16 @@ let dataset=[]
       display:"flex",
       justifyContent:"center",
       alignItems:"center",
-      padding:"5%"
+      padding:"5%",
+      background: this.state.color,
+      color:"white"
     }
 
-class SwipeCard extends React.Component {
-  state = {
-    data: [],
-    score: Math.floor(Math.random()*100)+20
-  };
-  renderCards() {
     return dataset.map((d) => {
-      console.log(dataset)
       return(
         <Card
           style={cardStyle}
-          key={this.state.data.id}
+          key={this.state.data.key}
           onSwipeRight={this.refresh.bind(this)}
           data={d}>
             <h1>{this.state.data.quote}</h1>
@@ -48,7 +54,7 @@ class SwipeCard extends React.Component {
 
     d3.csv(data).then((data,i)=> {
     dataset.push({
-      id:i,
+      key:i,
       quote:data['quote']
     })
     random = Math.floor(Math.random()*data.length)+0
@@ -64,6 +70,12 @@ class SwipeCard extends React.Component {
     this.setState({score: this.state.score +=points})
 
     console.log(this.state.score)
+
+    let random_color1 = Math.floor(Math.random()*colors.length)+0
+     let random_color2 = Math.floor(Math.random()*colors.length)+0
+    let new_color = "linear-gradient(73deg, #"+colors[random_color1]+" 0%, #"+colors[random_color2]+" 100%)"
+    console.log(new_color)
+    this.setState({color: new_color})
   }
 
 componentDidMount() {
