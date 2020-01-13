@@ -9,6 +9,7 @@ let dataset=[]
 let game_levels=[]
 const wrapperStyle = {
   backgroundColor: "transparent",
+  width:"100%",
   height:"70vh",
   marginBottom:"5%"
 }
@@ -28,7 +29,7 @@ class SwipeCard extends React.Component {
     const self = this;
     const cardStyle = {
       backgroundColor: "#f2f2f2",
-      width:"100%",
+      width:"70%",
       display:"flex",
       justifyContent:"center",
       alignItems:"center",
