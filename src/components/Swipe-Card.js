@@ -5,8 +5,9 @@ import data from './../data/data.csv';
 import levels from './../data/levels.csv';
 
 let dataset=[]
-const colors = ["f15a22", "ab4a9c", "0083ca", "2e3192", "ff4469", "6279ff", "00d748", 
-"ffcbb5", "cc5d49", "998783", "edb86c","ed6d6c", "4bba8d", "a0597e", "b3e1ed", "19c2ed", "54ceed"]
+const colors = ["f15a22", "ab4a9c", "0083ca", "2e3192", "ff4469", "6279ff", 
+"ffcbb5", "998783", "edb86c","ed6d6c", "4bba8d", "a0597e", "b3e1ed", "19c2ed", "54ceed", 
+"22c1c3", "fdbb2d"]
 
 class SwipeCard extends React.Component {
   state = {
