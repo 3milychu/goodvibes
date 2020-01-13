@@ -5,6 +5,7 @@ class Score extends React.Component {
 		return(
 			<div class='score'>
 			<h2>{this.props.score}</h2>
+			<h2>pts</h2>
 		</div>
 			)
 		

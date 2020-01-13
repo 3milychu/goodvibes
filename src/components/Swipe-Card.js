@@ -1,10 +1,12 @@
 import React from 'react';
 import { Card, CardWrapper } from 'react-swipeable-cards';
+import Instructions from './Instructions'
 import * as d3 from "d3";
 import data from './../data/data.csv';
 import levels from './../data/levels.csv';
 
 let dataset=[]
+let game_levels=[]
 const wrapperStyle = {
   backgroundColor: "transparent",
   height:"70vh",
@@ -17,7 +19,9 @@ const colors = ["f15a22", "ab4a9c", "0083ca", "2e3192", "ff4469", "6279ff",
 class SwipeCard extends React.Component {
   state = {
     data: [],
-    score: Math.floor(Math.random()*100)+20,
+    score: 0,
+    current_badge:"",
+    next_badge:"",
     color:"linear-gradient(73deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)"
   };
   renderCards() {
@@ -52,7 +56,7 @@ class SwipeCard extends React.Component {
   onSwipeRight(data) {
   }
 
-  refresh() {
+refresh() {
     let random;
     let points =  Math.floor(Math.random()*100)+20
     const self = this;
@@ -98,17 +102,26 @@ componentDidMount() {
   }
 
   d3.csv(data).then(callback.bind(this));
+
+  d3.csv(levels).then((data)=> {
+    game_levels.push(data)
+      this.setState({ current_badge: data[0]['badge'] });
+      this.setState({ next_badge: data[1]['badge'] });
+  });
   }
+
+
 
   render() {
     return(
       <React.Fragment>
         <div className="score">
-          <h2>{this.state.score}</h2>
+          <h2 id='counter'>{this.state.score}</h2><h2>pts</h2>
         </div>
        <CardWrapper style={wrapperStyle}>
         {this.renderCards()}
       </CardWrapper>
+      <Instructions current_badge={this.state.current_badge} next_badge={this.state.next_badge} text="Swipe right for more good vibes"/>
       </React.Fragment>
       )
   }

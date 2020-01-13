@@ -63,10 +63,32 @@ code {
   line-height:0.5em;
   border-bottom: 0.5em solid gold;
 }
+.game_status {
+  display:none;
+  width:70vw;
+  position:relative;
+}
+.game_status div{
+  width:fit-content;
+  display:inline-block;
+}
+.current {
+}
+.next {
+  position:absolute;
+  right:0%;
+}
 .score {
   position:fixed;
   top:0;
   right:5%;
+}
+.score h2 {
+  display:inline-block;
+  font-size:1.5em;
+}
+
+#counter {
+  font-size:3em;
   color:gold;
-  font-size:2em;
 }

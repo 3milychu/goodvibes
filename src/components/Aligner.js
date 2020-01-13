@@ -8,7 +8,6 @@ class Aligner extends React.Component {
 		return(
 		<div className='aligner'>
 			<SwipeCard />
-			<Instructions text="Swipe right for more good vibes"/>
 		</div>
 			)
 
