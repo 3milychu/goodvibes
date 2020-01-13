@@ -12,7 +12,7 @@ import SwipeCard from './components/Swipe-Card'
 
 ReactDOM.render(
 	<div>
-	<Logo name="Good Vibes" />
+	<Logo name="goodvibes." />
 	<Aligner />
 	</div>,
 	document.getElementById('root'));

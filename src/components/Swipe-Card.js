@@ -27,7 +27,8 @@ class SwipeCard extends React.Component {
       alignItems:"center",
       padding:"5%",
       background: this.state.color,
-      color:"white"
+      color:"white",
+      height:"50%"
     }
 
     return dataset.map((d) => {
