@@ -5,6 +5,11 @@ import data from './../data/data.csv';
 import levels from './../data/levels.csv';
 
 let dataset=[]
+const wrapperStyle = {
+  backgroundColor: "transparent",
+  height:"60vh",
+  marginBottom:"5%"
+}
 const colors = ["f15a22", "ab4a9c", "0083ca", "2e3192", "ff4469", "6279ff", 
 "ffcbb5", "998783", "edb86c","ed6d6c", "4bba8d", "a0597e", "b3e1ed", "19c2ed", "54ceed", 
 "22c1c3", "fdbb2d"]
@@ -17,9 +22,6 @@ class SwipeCard extends React.Component {
   };
   renderCards() {
     const self = this;
-    const wrapperStyle = {
-      backgroundColor: "transparent"
-    }
     const cardStyle = {
       backgroundColor: "#f2f2f2",
       width:"100%",
@@ -29,7 +31,8 @@ class SwipeCard extends React.Component {
       padding:"5%",
       background: this.state.color,
       color:"white",
-      height:"50%"
+      height:"70%",
+      borderRadius:"1em"
     }
 
     return dataset.map((d) => {
@@ -103,7 +106,7 @@ componentDidMount() {
         <div className="score">
           <h2>{this.state.score}</h2>
         </div>
-       <CardWrapper>
+       <CardWrapper style={wrapperStyle}>
         {this.renderCards()}
       </CardWrapper>
       </React.Fragment>

@@ -62,8 +62,7 @@ class Card extends React.Component {
     			<h2>{this.state.score}</h2>
     		</div>
 
-          <div className="card" key={this.state.data.key} onClick={
-          }>
+          <div className="card" key={this.state.data.key} onClick={this.refresh.bind(this)}>
             <h1>{this.state.data.quote}</h1>
           </div>
         </div>
