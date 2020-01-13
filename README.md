@@ -1,6 +1,8 @@
 # Good Vibes
 
 ## demo
+https://master.d15xraki2801c2.amplifyapp.com/
+
 <kbd><img src="/src/assets/demo.gif" width="400"></kbd>
 
 ## About this project
