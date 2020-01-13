@@ -28,6 +28,38 @@ class SwipeCard extends React.Component {
   onSwipe(data) {
   }
   onSwipeRight(data) {
+    let points =  Math.floor(Math.random()*100)+20
+    this.setState({score: this.state.score +=points})
+    
+    let random_color1 = Math.floor(Math.random()*colors.length)+0
+     let random_color2 = Math.floor(Math.random()*colors.length)+0
+    let new_color = "linear-gradient(73deg, #"+colors[random_color1]+" 0%, #"+colors[random_color2]+" 100%)"
+    // console.log(new_color)
+    this.setState({color: new_color})
+  }
+
+refresh() {
+    let random;
+    let points =  Math.floor(Math.random()*100)+20
+    const self = this;
+
+    d3.csv(data).then((data)=> {
+    dataset.push(data)
+    dataset = dataset[0]
+    random = Math.floor(Math.random()*data.length)+0
+      self.setState({ data: data[random] });
+    });
+
+    function callback(data) {
+      this.setState({ data: data[random] });
+    }
+
+    d3.csv(data).then(callback.bind(this));
+
+    this.setState({score: this.state.score +=points})
+
+    // console.log(this.state.score)
+
     let random_color1 = Math.floor(Math.random()*colors.length)+0
      let random_color2 = Math.floor(Math.random()*colors.length)+0
     let new_color = "linear-gradient(73deg, #"+colors[random_color1]+" 0%, #"+colors[random_color2]+" 100%)"
@@ -72,6 +104,7 @@ componentDidMount() {
       height:"60%",
       borderRadius:"1em"
     }
+
     if(dataset!=undefined){
       console.log(dataset)
     return dataset.map((d,index) => {
