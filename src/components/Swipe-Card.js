@@ -74,7 +74,10 @@ componentDidMount() {
       color:"white",
       height:"60%",
       borderRadius:"1em",
-      transform:"scale(1) translateY(0px)!important"
+      transform:"scale(1) translateY(0px)!important",
+      fontSize:"2em",
+      fontFamily:"Helvetica-Neue, sans-serif",
+      fontWeight:"800"
     }
 
     if(dataset!=undefined){
@@ -86,7 +89,7 @@ componentDidMount() {
           key={index}
           onSwipeRight={this.onSwipeRight.bind(this)}
           data={d}>
-            <h1>{d.quote}</h1>
+            {d.quote}
         </Card>
       );
     });
