@@ -5,6 +5,10 @@ https://master.d15xraki2801c2.amplifyapp.com/
 
 <kbd><img src="/src/assets/demo.gif" width="400"></kbd>
 
+## License
+
+[a link](/LICENSE.txt)
+
 ## About this project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
