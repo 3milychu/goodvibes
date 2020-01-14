@@ -108,8 +108,8 @@ code {
   width: 100%;
   text-align: center;
   bottom: 0%;
-  position: absolute;
   font-size:2em;
+  cursor:pointer;
 }
 .lightbox {
   background-color:white;
