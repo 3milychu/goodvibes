@@ -2,11 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Aligner from './components/Aligner'
-// import Card from './components/Card'
 import Logo from './components/Logo'
 import * as serviceWorker from './serviceWorker';
-import { Card, CardWrapper } from 'react-swipeable-cards';
-import SwipeCard from './components/Swipe-Card'
 
  
 
