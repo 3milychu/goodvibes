@@ -141,16 +141,15 @@ componentDidMount() {
 
   addEndCard() {
     const titleStyle = {
-      backgroundColor: "#f2f2f2",
+      backgroundColor: "transparent",
       width:"90%",
       display:"flex",
       justifyContent:"center",
       alignItems:"center",
       padding:"5%",
-      background: this.state.color,
-      color:"white",
-      height:"60%",
-      borderRadius:"1em",
+      color:"#333333",
+      height:"100%",
+      border:'none',
       fontSize:"2em",
       fontFamily:"Helvetica-Neue, sans-serif",
       fontWeight:"800"
