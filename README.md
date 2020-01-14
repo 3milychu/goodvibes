@@ -7,7 +7,7 @@ https://master.d15xraki2801c2.amplifyapp.com/
 
 ## License
 
-[a link](/LICENSE.txt)
+[LICENSE.txt](/LICENSE.txt)
 
 Non-commerical projects: free of charge<br />
 Commercial projects: subject to rates
