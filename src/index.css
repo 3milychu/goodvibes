@@ -100,7 +100,15 @@ code {
     font-size:1em;
   }
   .cards_container {
-    padding-top: 20%!important;
+    padding-top: 25%!important;
+  }
+  .score {
+    top:-2%;
+  }
+  .instructions > p {
+    font-size:1em;
+    margin-top:0%!important;
+     margin-bottom:0%!important;
   }
 }
 
