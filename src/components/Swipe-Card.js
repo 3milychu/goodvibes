@@ -13,7 +13,8 @@ const wrapperStyle = {
   backgroundColor: "transparent",
   width:"100%",
   height:"70vh",
-  marginBottom:"5%"
+  marginBottom:"5%",
+  border:"none",
 }
 const colors = ["f15a22", "ab4a9c", "0083ca", "2e3192", "ff4469", "6279ff", 
 "ffcbb5", "998783", "edb86c","ed6d6c", "4bba8d", "a0597e", "b3e1ed", "19c2ed", "54ceed", 
@@ -134,7 +135,36 @@ componentDidMount() {
       );
     });
     }
+  }
+  restart() {
+    window.location.reload()
+  }
 
+  addEndCard() {
+    const titleStyle = {
+      backgroundColor: "#f2f2f2",
+      width:"90%",
+      display:"flex",
+      justifyContent:"center",
+      alignItems:"center",
+      padding:"5%",
+      background: this.state.color,
+      color:"white",
+      height:"60%",
+      borderRadius:"1em",
+      transform:"scale(1) translateY(0px)!important",
+      fontSize:"2em",
+      fontFamily:"Helvetica-Neue, sans-serif",
+      fontWeight:"800"
+    };
+    return(
+      <div style={titleStyle}>
+      <div className="aligner">
+        You have achieved good vibe enlightment!
+        <div className="restart" onClick={this.restart.bind(this)}>Play again</div>
+        </div>
+      </div>
+    );
   }
 
   render() {
@@ -143,7 +173,7 @@ componentDidMount() {
         <div className="score">
           <h2 id='counter'>{this.state.score}</h2><h2>pts</h2>
         </div>
-       <CardWrapper style={wrapperStyle}>
+       <CardWrapper style={wrapperStyle} addEndCard={this.addEndCard.bind(this)}>
         {this.renderCards()}
       </CardWrapper>
       <Instructions current_badge={this.state.current_badge} next_badge={this.state.next_badge} text="Swipe ↗️ for more good vibes"/>

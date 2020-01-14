@@ -144,6 +144,9 @@ code {
 .popup em {
   font-style:normal;
 }
+.restart {
+  margin-top:5%;
+}
 @keyframes scale {
   0% {
     transform:scale(1);
