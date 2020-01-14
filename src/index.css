@@ -94,7 +94,62 @@ code {
   font-size:3em;
   color:gold;
 }
-
+#confetti {
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  left: 0;
+}
+.continue {
+  background-color: gold;
+  color: white;
+  font-weight: 800;
+  padding: 5% 0%;
+  width: 100%;
+  text-align: center;
+  bottom: 0%;
+  position: absolute;
+}
+.lightbox {
+  background-color:white;
+  opacity:0.9;
+  position: absolute;
+  z-index: 199;
+  top: 0;
+  width:100%;
+  height: 100vh;
+}
+.popup {
+  position: absolute;
+  z-index: 201;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display:none;
+}
+.popup h1 {
+    font-family: 'Abril Fatface', cursive;
+    animation: scale 4s ease-in-out infinite;
+}
+.popup p {
+  font-weight: 800;
+}
+.popup em {
+  font-style:normal;
+}
+@keyframes scale {
+  0% {
+    transform:scale(1);
+  }
+  50% {
+    transform:scale(1.5);
+  }
+  100% {
+    transform:scale(1);
+  }
+}
 @media screen and (max-width:767px){
   .logo {
     font-size:1em;
@@ -106,9 +161,9 @@ code {
     top:-2%;
   }
   .instructions > p {
-    font-size:1em;
+    font-size:0.8em;
     margin-top:0%!important;
-     margin-bottom:0%!important;
+    margin-bottom:0%!important;
   }
 }
 
@@ -118,11 +173,6 @@ code {
   }
   .card_container {
     font-size:1.5em!important;
-  }
-  .instructions > p {
-    font-size:0.8em;
-    margin-top:0%!important;
-     margin-bottom:0%!important;
   }
   .score {
     top:-3%;

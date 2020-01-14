@@ -6,6 +6,7 @@ class Aligner extends React.Component {
 		return(
 		<div className='aligner'>
 			<SwipeCard />
+			<canvas id="confetti"></canvas>
 		</div>
 			)
 

@@ -4,6 +4,8 @@ import Instructions from './Instructions'
 import * as d3 from "d3";
 import data from './../data/data.csv';
 import levels from './../data/levels.csv';
+import ConfettiGenerator from "confetti-js";
+import LevelUp from './LevelUp'
 
 let dataset=[]
 let game_levels=[]
@@ -34,9 +36,46 @@ class SwipeCard extends React.Component {
     let random_color1 = Math.floor(Math.random()*colors.length)+0
      let random_color2 = Math.floor(Math.random()*colors.length)+0
     let new_color = "linear-gradient(73deg, #"+colors[random_color1]+" 0%, #"+colors[random_color2]+" 100%)"
-    // console.log(new_color)
     this.setState({color: new_color})
+
+    let counter = this.state.score
+    console.log(counter)
+    const filteredLevels = game_levels.filter(x=> counter >= x.points);
+    const maxPoint = Math.max.apply(Math, filteredLevels.map(p=> p.points));
+    var current_level = filteredLevels.find(y=> y.points >= maxPoint); 
+    current_level = current_level.badge
+    this.setState({current_badge:current_level})
+    let current_level_index = game_levels.findIndex(d => d.badge === current_level)
+    let next_level = game_levels[current_level_index+1]['badge']
+    this.setState({next_badge:next_level})
+    console.log(this.state.current_badge, this.state.next_badge)
   }
+
+componentDidUpdate(prevProps, prevState) {
+  if (prevState.current_badge !== this.state.current_badge) {
+    // show popup
+   var popup = document.querySelector('.popup')
+   var next = document.querySelector('.continue')
+   var lightbox = document.querySelector('.lightbox')
+   popup.style.display="flex"
+   lightbox.style.display="block"
+
+    // play confetti
+    const confettiSettings = { target: 'confetti' };
+    const confetti = new ConfettiGenerator(confettiSettings);
+    const confetti_canvas = document.querySelector('#confetti')
+    confetti_canvas.style.zIndex="200"
+    confetti.render();
+
+    // clear alerts
+    next.onclick=function() {
+      lightbox.style.display="none"
+      confetti_canvas.style.zIndex="0"
+      confetti.clear();
+      popup.style.display="none"
+    }
+  }
+}
 
 componentDidMount() {
   let random;
@@ -57,6 +96,7 @@ componentDidMount() {
 
   d3.csv(levels).then((data)=> {
     game_levels.push(data)
+    game_levels = game_levels[0]
       this.setState({ current_badge: data[0]['badge'] });
       this.setState({ next_badge: data[1]['badge'] });
   });
@@ -81,12 +121,12 @@ componentDidMount() {
     }
 
     if(dataset!=undefined){
-      console.log(dataset)
     return dataset.map((d,index) => {
       return(
         <Card
           style={cardStyle}
           key={index}
+          onSwipe={this.onSwipeRight.bind(this)}
           onSwipeRight={this.onSwipeRight.bind(this)}
           data={d}>
             {d.quote}
@@ -107,6 +147,7 @@ componentDidMount() {
         {this.renderCards()}
       </CardWrapper>
       <Instructions current_badge={this.state.current_badge} next_badge={this.state.next_badge} text="Swipe right for more good vibes"/>
+      <LevelUp current_badge={this.state.current_badge} next_badge={this.state.next_badge} />
       </React.Fragment>
       )
   }
