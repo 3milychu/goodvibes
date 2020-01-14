@@ -38,6 +38,9 @@ code {
 .card-container {
   background-color:#f2f2f2;
 }
+.end_card {
+  border:none!important;
+}
 .instructions {
   bottom:5%;
   width:100%;

@@ -148,7 +148,7 @@ componentDidMount() {
       alignItems:"center",
       padding:"5%",
       color:"#333333",
-      height:"100%",
+      height:"80%",
       border:'none',
       fontSize:"2em",
       fontFamily:"Helvetica-Neue, sans-serif",
