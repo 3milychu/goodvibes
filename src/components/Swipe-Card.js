@@ -115,7 +115,6 @@ componentDidMount() {
       color:"white",
       height:"60%",
       borderRadius:"1em",
-      transform:"scale(1) translateY(0px)!important",
       fontSize:"2em",
       fontFamily:"Helvetica-Neue, sans-serif",
       fontWeight:"800"
@@ -152,7 +151,6 @@ componentDidMount() {
       color:"white",
       height:"60%",
       borderRadius:"1em",
-      transform:"scale(1) translateY(0px)!important",
       fontSize:"2em",
       fontFamily:"Helvetica-Neue, sans-serif",
       fontWeight:"800"
