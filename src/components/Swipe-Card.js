@@ -73,7 +73,8 @@ componentDidMount() {
       background: this.state.color,
       color:"white",
       height:"60%",
-      borderRadius:"1em"
+      borderRadius:"1em",
+      transform:"scale(1) translateY(0px)!important"
     }
 
     if(dataset!=undefined){

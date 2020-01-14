@@ -99,4 +99,7 @@ code {
   .logo {
     font-size:1em;
   }
+  .cards_container {
+    padding-top: 20%!important;
+  }
 }
