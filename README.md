@@ -9,6 +9,9 @@ https://master.d15xraki2801c2.amplifyapp.com/
 
 [a link](/LICENSE.txt)
 
+Non-commerical projects: free of charge<br />
+Commercial projects: subject to rates
+
 ## About this project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
