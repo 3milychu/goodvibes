@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardWrapper } from 'react-swipeable-cards';
+import { Card, CardWrapper } from 'react-swipeable-cards'
 import Instructions from './Instructions'
 import * as d3 from "d3";
 import data from './../data/data.csv';
@@ -82,9 +82,14 @@ componentDidMount() {
   let random;
   const self = this;
 
+  function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+  }
+
   d3.csv(data).then((data)=> {
   dataset.push(data)
-   dataset = dataset[0]
+  dataset = dataset[0]
+  shuffle(dataset)
   random = Math.floor(Math.random()*data.length)+0
     self.setState({ data: data[random] });
   });
