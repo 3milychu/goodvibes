@@ -5,12 +5,15 @@ https://master.d15xraki2801c2.amplifyapp.com/
 
 <kbd><img src="/src/assets/demo.gif" width="400"></kbd>
 
+## Componenet library
+
+https://bit.dev/emilychu/goodvibes
+
 ## License
 
 [LICENSE.txt](/LICENSE.txt)
 
-Non-commerical projects: free of charge<br />
-Commercial projects: subject to rates
+Free for non-commerical projects only
 
 ## About this project
 
