@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardWrapper } from 'react-swipeable-cards'
 import Instructions from './Instructions'
+import Score from './Score'
 import * as d3 from "d3";
 import data from './../data/data.csv';
 import levels from './../data/levels.csv';
@@ -172,9 +173,7 @@ componentDidMount() {
   render() {
     return(
       <React.Fragment>
-        <div className="score">
-          <h2 id='counter'>{this.state.score}</h2><h2>pts</h2>
-        </div>
+        <Score score={this.state.score}/>
        <CardWrapper style={wrapperStyle} addEndCard={this.addEndCard.bind(this)}>
         {this.renderCards()}
       </CardWrapper>
