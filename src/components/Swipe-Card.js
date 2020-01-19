@@ -177,7 +177,7 @@ componentDidMount() {
        <CardWrapper style={wrapperStyle} addEndCard={this.addEndCard.bind(this)}>
         {this.renderCards()}
       </CardWrapper>
-      <Instructions current_badge={this.state.current_badge} next_badge={this.state.next_badge} text="Swipe ↗️ for more good vibes"/>
+      <Instructions current_badge={this.state.current_badge} next_badge={this.state.next_badge} text="Swipe ↙️↗️ for more good vibes"/>
       <LevelUp current_badge={this.state.current_badge} next_badge={this.state.next_badge} />
       </React.Fragment>
       )

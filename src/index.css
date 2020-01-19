@@ -35,6 +35,13 @@ code {
   padding:10%;
   background-color:#f2f2f2;
 }
+.cards_container {
+      flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1
+}
 .card-container {
   background-color:#f2f2f2;
 }
